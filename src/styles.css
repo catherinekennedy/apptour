@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+/* body {
+  margin-left: 1%;
+} */
+/* .customTooltip * {
+  color: #4a4a4a;
+  font-size: 18px;
+} */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+.customTooltip .introjs-tooltip-title {
+  color: #c12508;
+  background-color: #f6c38b;
+  text-align: center;
+}
+
+.iconTick {
+  float: right;
+  font-size: 20px;
+}
+ .introjs-tooltip {
+  color: #c12508;
+  background-color: #f6c38b;
+  text-align: center;
+  border-radius: 50px 50px;
+ }
+
+.customTooltip .introjs-tooltipbuttons a {
+  color: #c12508;
+  background-color: #f6c38b;
+}
+
+.introjs-helperLayer:after {
+  position: fixed;
+  z-index: 100000;
+}
+
+.introjs-helperLayer {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* opacity: 0.5; */
+}
