@@ -1,4 +1,8 @@
+
+
+
 <nz-layout class="app-layout">
+ 
   <nz-sider
     class="menu-sidebar"
     nzCollapsible
@@ -8,12 +12,15 @@
     [nzTrigger]="null"
   >
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
+      <a href="https://ng.ant.design/" target="_blank" title="ac">
         <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
         <h1>Ant Design Of Angular</h1>
       </a>
+      <br>
+      <a href=""><h1>Ant Design Of dsfar</h1></a>
     </div>
-    <ul
+    <nb-menu [items]="items" style="color: white;"></nb-menu>
+    <!-- <ul
       nz-menu
       nzTheme="dark"
       nzMode="inline"
@@ -24,12 +31,7 @@
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/welcome">Welcome</a>
           </li>
-          <!-- <li nz-menu-item nzMatchRouter>
-            <a routerLink="/shepsherd">shepsherd</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/intro">intro.js</a>
-          </li> -->
+          
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/login">login</a>
           </li>
@@ -38,14 +40,8 @@
           </li>
         </ul>
       </li>
-      <!-- <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
-          </li>
-        </ul>
-      </li> -->
-    </ul>
+    
+    </ul> -->
   </nz-sider>
   <nz-layout>
     <nz-header>
@@ -83,8 +79,8 @@
           <div  id="demo" class="collapse sidenav">
             
             <span nz-icon nzType="close-circle" style="float: right;" nzTheme="outline" data-toggle="collapse" data-target="#demo"></span>
-            
 
+  
             <div class="tourheading">
             <p>QUICKSTART TOUR</p>
             <h5>App Enablement</h5>
@@ -182,6 +178,8 @@
         </div> -->
       </div>
     </nz-content>
-    <nz-footer> </nz-footer>
+    <nz-footer> 
+      
+    </nz-footer>
   </nz-layout>
 </nz-layout>

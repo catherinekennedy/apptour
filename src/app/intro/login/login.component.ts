@@ -4,6 +4,7 @@ import "intro.js/introjs.css";
 import { GlobalConstants } from "src/app/common/globalvar";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import * as $ from "jquery";
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: "app-login",
@@ -13,7 +14,7 @@ import * as $ from "jquery";
 export class LoginComponent implements OnInit {
   // loginTour = introJs();
 
-  constructor(private route: Router) {}
+  constructor(private route: Router,private message: NzMessageService) {}
   username: string = "";
   password: string = "";
 
@@ -90,35 +91,63 @@ export class LoginComponent implements OnInit {
 
         console.log(GlobalConstants.tour1._currentStep);
         if (GlobalConstants.tour1._currentStep == 1) {
-          if (this.username === "") {
-            console.log(this.username);
-            console.log(GlobalConstants.tour1._introItems.step);
-            // document
-            //   .querySelector(".introjs-nextbutton")
-            //   .element.classList.remove("introjs-disabled");
+          if(this.username === ""){
+            console.log("username is empty");
+            this.message.error('pls enter username');
+            GlobalConstants.tour1.goToStep(1).start().previousStep();
+          }
+        }else if(GlobalConstants.tour1._currentStep == 2){
+          if(this.password === ""){
+            console.log("pass is empty");
+            this.message.error('pls enter password');
+            GlobalConstants.tour1.goToStep(2).start().previousStep();
 
-            $(".introjs-nextbutton").attr("disabled", "true");
-          } else {
-            $(".introjs-nextbutton").removeAttr("disabled");
+          }else if(GlobalConstants.tour1._currentStep > 2){
+            if(this.username === ""){
+              this.message.error('pls enter username');
+              GlobalConstants.tour1.goToStep(1).start().previousStep();
+
+            }else if(this.password === ""){
+              this.message.error('pls enter password');
+              GlobalConstants.tour1.goToStep(2).start().previousStep();
+            }
           }
-        } else if (GlobalConstants.tour1._currentStep == 2) {
-          if (this.password === "") {
-            console.log(this.password);
-            $(".introjs-nextbutton").attr("disabled", "true");
-          } else {
-            $(".introjs-nextbutton").removeAttr("disabled");
+            
           }
-        } else if (GlobalConstants.tour1._currentStep == 3) {
-          if (this.password === "" && this.username === "") {
-            $(".introjs-donebutton").attr("disabled", "true");
-          } else {
-            $(".introjs-donebutton").removeAttr("disabled");
-          }
-          $(".introjs-skipbutton").attr("disabled", "true");
-        } else {
-          $(".introjs-nextbutton").removeAttr("disabled");
-          $(".introjs-skipbutton").removeAttr("disabled");
-        }
+
+        // if (GlobalConstants.tour1._currentStep == 1) {
+        //   if (this.username === "") {
+        //     console.log(this.username);
+        //     console.log(GlobalConstants.tour1._introItems.step);
+        //     // document
+        //     //   .querySelector(".introjs-nextbutton")
+        //     //   .element.classList.remove("introjs-disabled");
+
+        //     $(".introjs-nextbutton").attr("disabled", "true");
+        //   } else {
+        //     $(".introjs-nextbutton").removeAttr("disabled");
+        //   }
+        // } else if (GlobalConstants.tour1._currentStep == 2) {
+        //   if(this.username === ""){
+        //     GlobalConstants.tour1.goToStep(2).start().previousStep();
+        //   }
+        //   if (this.password === "") {
+        //     console.log(this.password);
+        //     $(".introjs-nextbutton").attr("disabled", "true");
+        //   } else {
+        //     $(".introjs-nextbutton").removeAttr("disabled");
+        //   }
+        // } else if (GlobalConstants.tour1._currentStep == 3) {
+        //   if (this.password === "" && this.username === "") {
+        //     $(".introjs-donebutton").attr("disabled", "true");
+        //   } else {
+        //     $(".introjs-donebutton").removeAttr("disabled");
+        //   }
+        //   $(".introjs-skipbutton").attr("disabled", "true");
+        // } else {
+        //   $(".introjs-nextbutton").removeAttr("disabled");
+        //   $(".introjs-skipbutton").removeAttr("disabled");
+        // }
       })
 
       .oncomplete(() => {

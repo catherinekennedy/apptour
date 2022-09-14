@@ -37,7 +37,7 @@ export class GlobalConstants {
       },
       {
         title: "Home",
-        element: ".home",
+        element: "a[title='Home']",
         intro: "Click here to view home page of school",
         position: "right",
         step: 4,

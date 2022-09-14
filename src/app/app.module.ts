@@ -1,5 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { NbSidebarModule, NbLayoutModule, NbButtonModule ,NbMenuModule} from '@nebular/theme';
+import { NbThemeModule } from '@nebular/theme';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -30,6 +32,10 @@ registerLocaleData(en);
     HomeComponent,
   ],
   imports: [
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+     NbSidebarModule.forRoot(), //if this is your app.module
+    NbButtonModule,
     BrowserModule,
     AppRoutingModule,
     NgZorroAntdModule,
@@ -37,8 +43,12 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     IconsProviderModule,
+    NbMenuModule.forRoot()
   ],
-  providers: [ShepherdService, { provide: NZ_I18N, useValue: en_US }],
+  providers: [ShepherdService, { provide: NZ_I18N, useValue: en_US },
+    NbLayoutModule,
+    NbSidebarModule, // NbSidebarModule.forRoot(), //if this is your app.module
+    NbButtonModule,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

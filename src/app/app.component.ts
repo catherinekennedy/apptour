@@ -1,8 +1,10 @@
-import { Component } from "@angular/core";
+// import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { GlobalConstants } from "src/app/common/globalvar";
 import * as introJs from "intro.js/intro.js";
 import "intro.js/introjs.css";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: "app-root",
@@ -11,6 +13,35 @@ import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 })
 export class AppComponent {
   constructor(private route: Router) {}
+
+  items: NbMenuItem[] = [
+    {
+      title: 'Profile',
+      expanded: true,
+      children: [
+        {
+          title: 'Change Password',
+        },
+        {
+          title: 'Privacy Policy',
+        },
+        {
+          title: 'Logout',
+        },
+      ],
+    },
+    {
+      title: 'Home',
+      link:'/home',
+      
+    },
+    {
+      title: 'login',
+      link:'/login',
+    },
+  ];
+
+
   isCollapsed = false;
   percent = GlobalConstants.percentage;
   appTour = GlobalConstants.arrTour;
