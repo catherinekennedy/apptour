@@ -6,12 +6,14 @@ import "intro.js/introjs.css";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import { NbMenuItem } from '@nebular/theme';
 
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
+  tooltipcolor ='#f50';
   constructor(private route: Router) {}
 
   items: NbMenuItem[] = [

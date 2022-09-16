@@ -88,25 +88,77 @@ nz-content {
 }
 .btnred{
   background-color: white;
+  border-radius: 40%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border :1px #FAFAFA;
+
+  
 }
 .btngreen{
-  
+  border :1px #FAFAFA;
   background-color: #D6F3B7;
-  border-radius: 50%;
+  border-radius: 40%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
 }
 .sidenav {
+  /* border: 1px solid; */
+  border-radius: 20px 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   /* height: 100%; */
-  width: 400px;
+  width: 300px;
   position: fixed;
   z-index: 100;
   /* top: 80%; */
-  top: 100px;
-  right: 0;
+  top: 50px;
+  right: 5px;
   background-color: white;
   overflow-x: hidden;
   padding: 20px;
-  overflow-y: scroll;
-  height: 50%;
+  overflow-y: auto;
+  /* height: 50%; */
+}
+.sidenav::-webkit-scrollbar-track {
+  border: 1px solid #F2F2F2;
+  padding: 2px 0;
+  background-color: #F2F2F2;
+  border-radius: 10px !important;
+}
+.button {
+
+  background-color: white;
+
+  border: 1px solid #e13f00;
+
+  color: black;
+
+  padding: 3px 10px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 12px;
+
+  margin: 4px 2px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+.sidenav::-webkit-scrollbar {
+  width: 7px;
+ 
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ff8555;
+  border-radius: 10px;
 }
 
 [nzType="success"] {
@@ -119,8 +171,8 @@ nz-content {
 .tourheading{
   text-align: center;
 }
-.infobadge{
-  border-radius: 30%;
-  margin-right: 5px;
+.tooltipbtn{
   margin-bottom: 5px;
+  border-radius: 50%;
 }
+

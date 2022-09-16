@@ -14,7 +14,7 @@ export class GlobalConstants {
       {
         title: "Username",
         element: ".inputuser",
-        intro: "please enter the username",
+        intro: "Please enter the Username",
         position: "bottom",
         step: 1,
         done:false,
@@ -22,7 +22,7 @@ export class GlobalConstants {
       {
         title: "Password",
         element: ".inputpassword",
-        intro: "please enter the password",
+        intro: "Please enter the password",
         position: "top",
         step: 2,
         done:false,
@@ -30,7 +30,7 @@ export class GlobalConstants {
       {
         title: "login",
         element: ".login-form-button",
-        intro: "press login after entering details",
+        intro: "Press login after entering details",
         position: "right",
         step: 3,
         done:false,
@@ -49,7 +49,7 @@ export class GlobalConstants {
         element: ".jumbotron",
         title: "Tab Tour",
         intro:
-          "this tour  will guide you about programs and teacher of kaar school",
+          "This tour  will guide you about programs and teacher of kaar school",
         position: "right",
         step: 1,
         done:false,
@@ -58,7 +58,7 @@ export class GlobalConstants {
         element: ".Scholorship",
         title: "Scholorship",
         intro:
-          "government supported Scholorship are provided here.  click to view",
+          "Government supported Scholorship are provided here.  click to view",
         position: "right",
         step: 2,
         done:false,
@@ -66,7 +66,7 @@ export class GlobalConstants {
       {
         title: "Teachers",
         element: ".Teachers",
-        intro: "details of teachers are shown here",
+        intro: "Details of teachers are shown here",
         position: "top",
         step: 3,
         done:false,
@@ -74,7 +74,7 @@ export class GlobalConstants {
       {
         element: ".pro",
         title: "Programs",
-        intro: "extra carricular programs are available here. click to view",
+        intro: "Extra carricular programs are available here. click to view",
         position: "top",
         step: 4,
         done:false,

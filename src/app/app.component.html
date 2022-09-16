@@ -82,20 +82,22 @@
 
   
             <div class="tourheading">
-            <p>QUICKSTART TOUR</p>
-            <h5>App Enablement</h5>
+            <p >QUICKSTART TOUR</p>
+            <h6>App Enablement</h6>
           </div>
             <nz-progress
               [nzPercent]="percent.percent"
               nzStatus="active"
-              [nzStrokeColor]="{ '0%': '#F6DC30', '100%': '#F6DC30' }"
+              [nzStrokeColor]="{ '0%': '#ff8555', '100%': '#ff8555' }"
             ></nz-progress>
             <br />
             <br />
-            <button type="button" class="btn btn-info infobadge">Workplace</button>
-            <button type="button" class="btn btn-info infobadge">Labs</button>
-            <button type="button" class="btn btn-info infobadge">Mines</button>
-            <button type="button" class="btn btn-info infobadge">Projects</button>
+ <div class="text-center">
+            <button type="button" class="button" >Workplace</button>
+            <button type="button" class="button">Labs</button>
+            <button type="button" class="button">Mines</button>
+            <button type="button" class="button">Projects</button>
+          </div>
             <nz-collapse>
               <nz-collapse-panel
                 *ngFor="let appName of apptourname; let i = index"
@@ -103,15 +105,17 @@
                 nzActive="false"
                 [nzExtra]="extraTpl"
               >
-              <div class="text-center">
-              <button nz-button nzType="danger"  nzDanger (click)="tour(appName)" style="margin-bottom: 5px;">GUIDE ME</button>
-            </div>
-            <div nz-row  *ngFor="let name of tours[i]">
+              <!-- <div class="btnguide">
+              <button nz-button (click)="tour(appName)"  nzShape="circle" >Search</button>
+            </div> -->
+            <div nz-row>
+             
+            <div nz-col nzSpan="12">
+            <div nz-row  *ngFor="let name of tours[i]" class="text-left">
               <div nz-col nzSpan="6" >
             <button
                   nz-button
                   nzType="text"
-                  nzShape="circle"
                   nzTwotoneColor="green"
                   [class]="name.done ? 'btngreen': 'btnred' "
                   
@@ -121,15 +125,30 @@
                   {{ name.step}}
                 </button>
               </div>
-                <div nz-col nzSpan="12" ><p>{{ name.title }}</p></div>
+                <div nz-col nzSpan="12" ><p style="font-size:12px">{{ name.title }}</p></div>
                 
               </div>
-                <div nz-row nzJustify="space-evenly" style="margin-top: 5px;">
-                  <div nz-col nzSpan="12" ><button nz-button nzType="default"  nzDanger >SEE TUTORIAL</button></div>
+            </div>
+
+            <div nz-col nzSpan="8" nzOffset="4">
+              <button nz-button nzType="dashed" nz-tooltip nzTooltipTitle="Guide me" nzTooltipColor="red"  (click)="tour(appName)" class="tooltipbtn"><i style="font-size:12px" class="fa fa-street-view" aria-hidden="true"></i></button>
+              <br>
+              <button nz-button nzType="dashed" nz-tooltip nzTooltipTitle="See tutorial"   class="tooltipbtn"><i style="font-size:12px" class="fa fa-television" aria-hidden="true"></i></button>
+<br>
+<button nz-button nzType="dashed" nz-tooltip nzTooltipTitle="Read Docs" class="tooltipbtn"><i  i style="font-size:12px" class="fa fa-book" aria-hidden="true" ></i></button>
+
+            </div>
+            </div>
+                <!-- <div nz-row nzJustify="space-evenly" style="margin-top: 5px;">
+                  <div nz-col nzSpan="12" >
+                    <button nz-button nzType="dashed" nz-tooltip nzTooltipTitle="See tutorial"  ><i class="fa fa-television" aria-hidden="true"></i></button>
+
+                  </div>
                   <div nz-col nzSpan="12">
-                <button nz-button nzType="default"  nzDanger >READ DOCS</button>
+                    <button nz-button nzType="dashed" nz-tooltip nzTooltipTitle="Read Docs"><i class="fa fa-book" aria-hidden="true"></i></button>
+
               </div>
-              </div>
+              </div> -->
 
 
                 <ng-template #extraTpl>
@@ -140,7 +159,7 @@
                     nz-icon
                     [nzType]="apptourval[i] ? 'check-circle' : 'close-circle'"
                     [nzTheme]="'twotone'"
-                    [nzTwotoneColor]="apptourval[i] ? 'green' : 'red'"
+                    [nzTwotoneColor]="apptourval[i] ? '#12E41D' : '#F70000'"
                   >
                   </span>
                 </ng-template>
