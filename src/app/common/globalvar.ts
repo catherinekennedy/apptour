@@ -91,6 +91,11 @@ export class GlobalConstants {
       },
     ],
   ];
+  public static tourbtn ={
+    "data":[
+    {btn:"workplace"},{btn:"mines"},{btn:"labs"},{btn:"projects"}
+    ]
+};
 
   //   public static percent = 70;
 

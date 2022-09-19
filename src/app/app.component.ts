@@ -13,7 +13,7 @@ import { NbMenuItem } from '@nebular/theme';
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  tooltipcolor ='#f50';
+  
   constructor(private route: Router) {}
 
   items: NbMenuItem[] = [
@@ -50,6 +50,7 @@ export class AppComponent {
   apptourname = GlobalConstants.apptourName;
   apptourval = GlobalConstants.apptourvalue;
   tours = GlobalConstants.tour;
+  tourbtn = GlobalConstants.tourbtn;
   call(step, title, x) {
     console.log(x);
     console.log(this.route.url);

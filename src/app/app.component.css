@@ -87,19 +87,17 @@ nz-content {
   color:#001529;
 }
 .btnred{
-  background-color: white;
-  border-radius: 40%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  border :1px #FAFAFA;
+ color:#e13f00;
 
   
 }
 .btngreen{
-  border :1px #FAFAFA;
-  background-color: #D6F3B7;
-  border-radius: 40%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+ color:#82AA47;
 
+}
+nb-menu{
+  color: white;
+  z-index: 10000 !important;
 }
 .sidenav {
   /* border: 1px solid; */
@@ -174,5 +172,27 @@ nz-content {
 .tooltipbtn{
   margin-bottom: 5px;
   border-radius: 50%;
+}
+.righttooltipicon{
+  font-size:12px;
+  margin-right: 12px;
+  color: gray;
+
+}
+
+::ng-deep .p-carousel .p-carousel-indicators {
+  padding: 1px;
+  visibility: hidden;
+}
+
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev,::ng-deep  .p-carousel .p-carousel-content .p-carousel-next {
+  width: 10px;
+  height: 10px;
+  color: #6c757d;
+  border: 0 none;
+  background: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+ 
 }
 
